@@ -1,0 +1,11 @@
+{
+  "body": "{\"content\":\"newerer world\",\"attachment\":\"newer.jpg\"}",
+  "pathParameters": {
+    "id": "d5071900-7b25-11ea-9b40-53e107fb3441"
+  },
+  "requestContext": {
+    "identity": {
+      "cognitoIdentityId": "USER-SUB-1234"
+    }
+  }
+}
