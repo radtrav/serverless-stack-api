@@ -20,7 +20,11 @@ export const main = handler(async (event, context) => {
     ReturnValues: "ALL_NEW"
   };
 
+  console.log('UPDATE PARAMS', { params });
+
   const result = await dynamoDb.update(params);
+
+  console.log('result', { result });
 
   return { status: true, result };
 });

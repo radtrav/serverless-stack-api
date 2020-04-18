@@ -15,6 +15,10 @@ export const main = handler(async (event, context) => {
     }
   };
 
-  await dynamoDb.put(params);
+  console.log('CREATE PARAMS', { params });
+
+  const res = await dynamoDb.put(params);
+
+  console.log('res', res);
   return params.Item;
 });
