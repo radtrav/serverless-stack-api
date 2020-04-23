@@ -1,0 +1,8 @@
+{
+  "body": "{\"text\":\"This is a test\",\"targetLanguages\": [\"fr\", \"ja\"], \"sourceLanguage\":\"en\"}",
+  "requestContext": {
+    "identity": {
+      "cognitoIdentityId": "USER-SUB-1234"
+    }
+  }
+}

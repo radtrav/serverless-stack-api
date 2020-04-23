@@ -28,6 +28,8 @@ provider:
   environment:
     tableName: ${self:custom.tableName}
     stripeSecretKey: ${env:STRIPE_SECRET_KEY}
+    searchApi: ${env:SEARCH_API}
+    searchApiKey: ${env:SEARCH_API_KEY}
 
   # 'iamRoleStatements' defines the permission policy for the Lambda function.
   # In this case Lambda functions are granted with permissions to access DynamoDB.
@@ -92,6 +94,14 @@ functions:
     events:
       - http:
           path: billing
+          method: post
+          cors: true
+          authorizer: aws_iam
+  translateSearch:
+    handler: translateSearch.main
+    events:
+      - http:
+          path: translate-search
           method: post
           cors: true
           authorizer: aws_iam
