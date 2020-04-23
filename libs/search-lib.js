@@ -6,8 +6,8 @@ const search = query => axios({
   "url": "https://13tabs-web-search.p.rapidapi.com/api/web/index.jsp",
   "headers": {
     "content-type": "application/octet-stream",
-    "x-rapidapi-host": process.env.SEARCH_API,
-    "x-rapidapi-key": process.env.SEARCH_API_KEY
+    "x-rapidapi-host": process.env.searchApi,
+    "x-rapidapi-key": process.env.searchApiKey
   }, "params": {
     "q": query,
     "per_page": "3",

@@ -32,8 +32,13 @@ provider:
     searchApiKey: ${env:SEARCH_API_KEY}
 
   # 'iamRoleStatements' defines the permission policy for the Lambda function.
-  # In this case Lambda functions are granted with permissions to access DynamoDB.
   iamRoleStatements:
+    # Allow lambda to use Amazon Translate
+    - Effect: 'Allow'
+      Action:
+        - 'translate:*'
+      Resource: '*'
+    # Allow lambda to use DynamoDb
     - Effect: Allow
       Action:
         - dynamodb:DescribeTable

@@ -55,12 +55,6 @@ Resources:
                   - 'cognito-identity:*'
                 Resource: '*'
 
-              # Allow users to use Amazon Translate
-              - Effect: 'Allow'
-                Action:
-                  - 'translate:TranslateText'
-                Resource: '*'
-                
               # Allow users to invoke our API
               - Effect: 'Allow'
                 Action:
